@@ -1,0 +1,196 @@
+body {
+    background-image: url('lex_desk-bg.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color: #3a2e2e;
+}
+
+#viewcontact {
+    background-image: url('lex_desk-bg2.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color: #3a2e2e;
+}
+
+/*nav css*/
+ul {
+    display: block;
+    margin: 0px;
+    list-style-type: none;
+    width: 55%;
+    padding: 0;
+    overflow: auto;
+    border: 1px solid #a9a8a8;
+    background-color: #a9a8a8;
+    vertical-align:top;
+    margin-bottom: 20px;
+    margin-right: 5%;
+    margin-top: 5%;
+    float: right;
+    clear: both;
+    box-shadow: 3px 3px 4px #777;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #c0c0c0;
+}
+
+.active {
+    background-color: grey;
+}
+
+/*titles, warning, and other text*/
+h4 {
+    color: white;
+    font-size: 30px;
+    float: right;
+    clear: right;
+    margin-top: 25px;
+    margin-right: 28%;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 15%;
+}
+
+#error {
+    color: red;
+    font-size: 15px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 15%;
+}
+
+/*display the contacts from the addressbook*/
+table {
+    float: right;
+    clear: right;
+    margin-right: 30%;
+    color: white;
+}
+
+.nametd {
+    width: 200px;
+    margin-left: 10px;
+}
+
+#profilepic {
+    border-radius: 50px;
+}
+
+.profilepic2 {
+    border-radius: 60px;
+    width: 80px;
+    height: 80px;
+}
+
+#userID {
+    color: white;
+}
+
+/*create new contact form*/
+form {
+    display: block;
+    color: white;
+    float: right;
+    clear: right;
+    margin-top: 25px;
+    margin-right: 25%;
+}
+
+label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 170px;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+input {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+/*address book button on create contact page*/
+#addressbookbutton {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+
+#addressbookbutton:hover {
+    background-color: lightgrey;
+    color: black;
+}
+
+.viewContact {
+    color: white;
+    text-decoration: none;
+}
+
+.viewContact:hover {
+    font-size: 18px;
+    color: #ffffff;
+    /*border: 1px solid black;*/
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+/*displays contact info table*/
+#displayContactInfo {
+    margin-right: 86.5%;
+    margin-top: 15%;
+    margin-left: 73.5%;
+    color: black;
+    font-size: 30px;
+}
+
+.info {
+    width: 300px;
+}
+
+/*remove contact page*/
+#removecontact {    
+    background-color: red;
+    float: left;
+    margin-right: 50%;
+}
+
+#remove {
+    float: left;
+}
+
+#backtocontactbutton {
+    background-color: pink;
+}
+
+#removecontactlink {
+    background-color: grey;
+}
+
+
+
