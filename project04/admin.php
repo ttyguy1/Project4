@@ -24,21 +24,15 @@
 		if (is_file(MM_UPLOADPATH . $row['profilePicture']) && filesize(MM_UPLOADPATH . $row['profilePicture']) > 0) {
 			echo '<tr><td><img class="profilepic2" src="' . MM_UPLOADPATH . $row['profilePicture'] . '" alt="' . $row['firstName'] .
 					" " . $row['lastName'] . '" /></td>';
-			echo '<td class="nametd">' . $row['firstName'] . ' ' . $row['lastName'] . '<a id="removecontactlink" href="removecontact.php?id=' . $row['id'] . '&amp;firstName=' . $row['firstName'] .
-    							'&amp;lastName=' . $row['lastName'] . '">Remove</a>
-				            <a href="#">Edit</a>
-	    				</select></td></tr>';
+			echo '<td class="nametd">' . $row['firstName'] . ' ' . $row['lastName'] . '<a class="removecontactlink" href="removecontact.php?id=' . 
+					$row['id'] . '&amp;firstName=' . $row['firstName'] . '&amp;lastName=' . $row['lastName'] . '">Remove</a>';
 		}
 		
 		else {
 			echo '<tr><td><img class="profilepic2" src="' . MM_UPLOADPATH . 'nopic.jpg' . '" alt="' . $row['firstName'] . 
 					" " . $row['lastName'] . '" /></td>';
-			echo '<td class="nametd">' . $row['firstName'] . ' ' . $row['lastName'] . '
-						<select> 
-							<option selected disabled><a href="#">Actions</a></option>
-	            			<option value="remove"><a href="#">Remove</a></option>
-				            <option value="edit"><a href="#">Edit</a></option>
-	    				</select></td></tr>';
+			echo '<td class="nametd">' . $row['firstName'] . ' ' . $row['lastName'] . '<a class="removecontactlink" href="removecontact.php?id=' . 
+					$row['id'] . '&amp;firstName=' . $row['firstName'] . '&amp;lastName=' . $row['lastName'] . '">Remove</a>';
 		}
 	}
 

@@ -6,7 +6,7 @@
 	require_once('connectvars.php');
 
 	// Show the navigation menu
-	require_once('navmenu.php');
+	require_once('navmenu.3.php');
     
     if (isset($_GET['id']) && isset($_GET['firstName']) && isset($_GET['lastName'])) {
         // Grab the score data from the GET
@@ -37,24 +37,23 @@
             mysqli_close($dbc);
     
             // Confirm success with the user
-            echo '<p>The contact ' . $firstName . ' for ' . $lastName . ' was successfully removed.';
+            echo '<p class="removecontact">The contact ' . $firstName . ' for ' . $lastName . ' was successfully removed. <a class="backtocontactbutton" href="admin.php">Back to admin page</a></p>';
         } else {
-            echo '<p class="error">The contact was not removed.</p>';
+            echo '<p class="error removecontact">The contact was not removed. <a class="backtocontactbutton" href="admin.php">Back to admin page</a></p>';
         }
     } else if (isset($id) && isset($firstName) && isset($lastName)) {
-        echo '<p>Are you sure you want to delete the following contact?</p><br/>';
-        echo '<p id="t"><strong>First name: </strong>' . $firstName . '<br /><strong>Last name: </strong>' . $lastName . '</p>';
-        echo '<form id="removecontact" method="post" action="removecontact.php">';
-        echo '<input class="remove" type="radio" name="confirm" value="Yes" /> Yes ';
-        echo '<input class="remove" type="radio" name="confirm" value="No" checked="checked" /> No <br />';
+        echo '<div class="removecontact"><p id="removetitle">Are you sure you want to delete the following contact?</p><br/>';
+        echo '<p id="title"><strong>First name: </strong>' . $firstName . '<br /><strong>Last name: </strong>' . $lastName . '</p>';
+        echo '<form id="back" method="post" action="removecontact.php">';
+        echo '<input class="removeinput" type="radio" name="confirm" value="Yes" /> Yes <br/><br/>';
+        echo '<input class="removeinput" type="radio" name="confirm" value="No" checked="checked" /> No <br/><br/><br/>';
         echo '<input type="submit" value="Submit" name="submit" />';
         echo '<input type="hidden" name="id" value="' . $id . '" />';
         echo '<input type="hidden" name="firstName" value="' . $firstName . '" />';
         echo '<input type="hidden" name="lastName" value="' . $lastName . '" />';
-        echo '</form>';
+        echo '</form><div>';
     }
-    
-    echo '<p><a id="backtocontactbutton" href="viewcontact.php">Back to contact page</a></p>';
+
 ?>
 
 </body> 

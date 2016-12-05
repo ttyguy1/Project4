@@ -16,7 +16,7 @@
 	$data = mysqli_query($dbc, $query);
 
 	// Loop through the array of user data, formatting it as HTML
-	echo '<h4>Contacts:</h4>';
+	echo '<h4>Address Book</h4>';
 	echo '<table>';
 	while ($row = mysqli_fetch_array($data)) {
 		if (is_file(MM_UPLOADPATH . $row['profilePicture']) && filesize(MM_UPLOADPATH . $row['profilePicture']) > 0) {

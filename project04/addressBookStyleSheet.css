@@ -6,11 +6,12 @@ body {
 }
 
 #viewcontact {
-    background-image: url('lex_desk-bg2.jpg');
+    background-image: url('lex_desk-bg3.png');
     background-size: 100%;
     background-attachment: fixed;
     background-color: #3a2e2e;
 }
+
 
 /*nav css*/
 ul {
@@ -63,10 +64,11 @@ h4 {
 
 p {
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     float: right;
+    clear: right;
     margin-top: 25px;
-    margin-right: 15%;
+    margin-right: 10%;
 }
 
 #error {
@@ -81,12 +83,12 @@ p {
 table {
     float: right;
     clear: right;
-    margin-right: 30%;
+    margin-right: 25%;
     color: white;
 }
 
 .nametd {
-    width: 200px;
+    width: 300px;
     margin-left: 10px;
 }
 
@@ -118,7 +120,7 @@ label {
     display: inline-block;
     float: left;
     clear: left;
-    width: 170px;
+    width: 180px;
     font-size: 30px;
     text-align: left;
     margin-bottom: 20px;
@@ -130,6 +132,10 @@ input {
   height: 30px;
   width: 200px;
   border-radius: 10px;
+}
+
+#completed {
+    font-size: 16px;
 }
 
 /*address book button on create contact page*/
@@ -162,34 +168,85 @@ input {
 
 /*displays contact info table*/
 #displayContactInfo {
-    margin-right: 86.5%;
-    margin-top: 15%;
-    margin-left: 73.5%;
+    margin-top: 13%;
+    margin-left: 65%;
     color: black;
-    font-size: 30px;
+    font-size: 1.5em;
+    padding: 8px;
+    width: 400px;
+}
+
+.label {
+    width: 100%;
 }
 
 .info {
     width: 300px;
 }
 
+/*admin page*/
+.removecontactlink {
+    display: inline-block;
+    float: right;
+    background-color: grey;
+    border-radius: 25%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.removecontactlink:hover {
+    background-color: lightgrey;
+    color: black;
+}
+
 /*remove contact page*/
-#removecontact {    
-    background-color: red;
+#removetitle {
+    font-size: 30px;
+    text-align: center;
+}
+
+.removecontact {
+    float: right;
+    clear: right;
+    width: 40%;
+    margin-right: 10%;
+    font-size: 30px;
+}
+
+.removeinput {
+    width: 5%;
     float: left;
+    clear: left;
+}
+
+#title {
+    color: white;
+    font-size: 25px;
+    float: left;
+    margin-top: 25px;
     margin-right: 50%;
 }
 
-#remove {
-    float: left;
+#back {
+    float: right;
+    margin-right: 50%;
+    width: 50%;
 }
 
-#backtocontactbutton {
-    background-color: pink;
-}
-
-#removecontactlink {
+.backtocontactbutton {
     background-color: grey;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#backtocontactbutton:hover {
+    background-color: lightgrey;
+    color: black;
 }
 
 

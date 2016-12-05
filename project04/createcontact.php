@@ -27,27 +27,6 @@
 		$profile_picture_size = $_FILES['profilePicture']['size']; 
 		list($profile_picture_width, $profile_picture_height) = getimagesize($_FILES['profilePicture']['tmp_name']);
 		$error = false;
-		
-		//Validating the phone number
-		if(!preg_match('/^\(?[2-9]\d{2}\)?[-\s]\d{3}[-\s]\d{4}$/', $phone_number)) {
-			//$phone is NOT valid
-			echo '<p class="error"> Your phone is INVALID</p>';
-			$output_form = 'yes';
-		}
-		
-		if (!preg_match('/^[a-zA-Z0-9][a-zA-Z0-9\._\-&!?=#]*@/', $email)) {
-			// $email is invalid because LocalName is bad
-			echo '<p class="error">Your email address is invalid.</p>';
-			$output_form = 'yes';
-		} else {
-			// Strip out everything but the domain from the email
-			$domain = preg_replace('/^[a-zA-Z0-9][a-zA-Z0-9\._\-&!?=#]*@/', '', $email);
-			// Now check if $domain is registered
-			if (!checkdnsrr($domain)) {
-				echo '<p class="error">Your email address is invalid.</p>';
-				$output_form = 'yes';
-			}
-		}
 
 		// Validate and move the uploaded picture file, if necessary
 		if (!empty($profile_picture)) {
@@ -93,7 +72,7 @@
 				mysqli_query($dbc, $query);
 
 				// Confirm success with the user
-				echo '<p>Your contcat has been successfully added to the address book. <a id="addressbookbutton" href="displayaddressbook.php">Address Book</a></p>';
+				echo '<p id="completed">Your contcat has been successfully added to the address book. <a id="addressbookbutton" href="displayaddressbook.php">Address Book</a></p>';
 
 				mysqli_close($dbc);
 				exit();
